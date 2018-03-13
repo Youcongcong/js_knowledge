@@ -19,7 +19,6 @@ console.log('start---------plane')
 console.log(clonePlane)
 console.log('end---------plane')
 
-
 //<!-------------------------------------------->
 function Person(name){
     this.name = name;
