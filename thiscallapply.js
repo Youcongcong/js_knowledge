@@ -69,6 +69,7 @@ var objaa = {
         return this.myName
     }
 }
+
 var getname2 = objaa.getName;
 console.log(getname2())  // 这时候this指向window  undefine
 
