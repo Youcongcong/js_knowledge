@@ -32,6 +32,7 @@ console.log(a.name)
 console.log(a.getName())
 console.log('end---------Person')
 
+
 class Animal{
     constructor(name){
         this.name = name;
