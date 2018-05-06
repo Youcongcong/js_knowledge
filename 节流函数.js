@@ -5,17 +5,21 @@
 
 //实现方式：1、时间戳 2、定时器
 
-var throttle = function (func, delay) {
+var throttle = function(func,delay){
     var prev = Date.now();
-    return function () {
+    return function(){
         var context = this;
         var args = arguments;
         var now = Date.now();
-        if (now - prev >= delay) {
-            console.log(delay)
-
-            func.call(context, args);
-            prev = Date.now()
+        
+        if(now - prev >= delay){
+            func.call(context, args)
+            console.log(now - prev)
+            prev = Date.now();
         }
     }
 }
+var example = function(){
+    console.log(1)
+}
+throttle(example(),10000)
