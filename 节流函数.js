@@ -11,10 +11,9 @@ var throttle = function(func,delay){
         var context = this;
         var args = arguments;
         var now = Date.now();
-        
+        console.log(now - prev)
         if(now - prev >= delay){
             func.call(context, args)
-            console.log(now - prev)
             prev = Date.now();
         }
     }
