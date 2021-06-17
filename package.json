@@ -1,0 +1,33 @@
+{
+  "name": "js_knowledge",
+  "version": "1.0.0",
+  "description": "javascript",
+  "main": "1Ajax原理.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youcongcong/js_knowledge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Youcongcong/js_knowledge/issues"
+  },
+  "homepage": "https://github.com/Youcongcong/js_knowledge#readme",
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  },
+  "dependencies": {
+    "@vue/eslint-config-standard": "^5.1.2",
+    "animate.css": "^3.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2"
+  }
+}

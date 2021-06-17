@@ -13,7 +13,7 @@
  *               text2:'text2',
  *               text3:'text3'
  *          }
- *         
+ *
  *      }
  * })
  * 然后我们做了一个这么操作
@@ -42,30 +42,33 @@
  * 我们应该需要通知两个实例进行视图的更新，【收集依赖】会让text1知道有哪些地方依赖我的数据，变化的时候需要通知他们
  */
 
- class Dep {
-     constructor() {
-         //用来存放Watcher对象数组
-         this.subs = []
-     };
-     /* 在subs中添加一个Watcher对象 */
-     addSub(sub){
-        this.subs.push(sub)
-     };
-     /* 通知Watcher对象更新视图 */
-     notify(){
-         this.subs.forEach((sub) =>{
-             sub.update();
-         })
-     }
- }
- class Watcher{
-     constructor() {
-         // 在new Watcher对象时将该对象赋值Dep.target
-         Dep.target = this;
-     };
-     // 更新视图的方法
-     update(){
-         console.log('升级版视图更新啦～')
-     }
- }
- Dep.target = null
+class Dep {
+  constructor () {
+    // 用来存放Watcher对象数组
+    this.subs = []
+  };
+
+  /* 在subs中添加一个Watcher对象 */
+  addSub (sub) {
+    this.subs.push(sub)
+  };
+
+  /* 通知Watcher对象更新视图 */
+  notify () {
+    this.subs.forEach((sub) => {
+      sub.update()
+    })
+  }
+}
+class Watcher {
+  constructor () {
+    // 在new Watcher对象时将该对象赋值Dep.target
+    Dep.target = this
+  };
+
+  // 更新视图的方法
+  update () {
+    console.log('升级版视图更新啦～')
+  }
+}
+Dep.target = null
